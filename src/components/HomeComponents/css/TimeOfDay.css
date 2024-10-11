@@ -1,0 +1,35 @@
+.hour-container {
+  /* padding: 50px 80px; */
+  width: 220px;
+  height: 120px;
+  position: relative;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+.hour-container:hover {
+  opacity: 0.7;
+}
+.hour {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  opacity: 0.6;
+  cursor: default;
+  font-size: 14px;
+}
+.hour.active {
+  opacity: 1;
+  text-decoration: underline;
+}
+.to-do {
+  font-size: 18px;
+  text-decoration: underline;
+}
+.nothing-todo {
+  font-size: 18px;
+  opacity: 0.5;
+  text-decoration: none;
+}

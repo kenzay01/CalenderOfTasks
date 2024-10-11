@@ -1,0 +1,96 @@
+.login-page,
+.reg-page {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-form,
+.reg-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background-color: #242e36;
+  border-radius: 10px;
+  filter: drop-shadow(5px 10px 0 rgba(0, 0, 0, 0.5));
+}
+.login-form h1,
+.reg-form h1 {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.login-form h1::after,
+.reg-form h1::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background-color: #1a2026;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.login-form h1:hover::after,
+.reg-form h1:hover::after {
+  width: 100%;
+}
+.input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.input.username input {
+  width: 100%;
+}
+.input input {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #1a2026;
+  color: white;
+}
+.input input::placeholder {
+  color: white;
+}
+.psswd-see {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  background-color: #1a2026;
+  border-radius: 5px;
+  color: white;
+}
+.psswd-see.see {
+  color: #1a2026;
+  background-color: white;
+}
+.btn-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.btn-container button {
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background-color: #1a2026;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.to-somewhere {
+  text-align: center;
+  color: white;
+}
+.to-somewhere a {
+  color: white;
+  transition: all 0.2s;
+}
+.to-somewhere a:hover {
+  color: #8bcdff;
+}

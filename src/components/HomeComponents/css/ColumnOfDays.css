@@ -1,0 +1,22 @@
+.column-container {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background-color: #242e36;
+  border-radius: 10px;
+  color: white;
+  gap: 20px;
+  box-shadow: 5px 10px 0 rgba(0, 0, 0, 0.5);
+}
+.column-of-days {
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.day {
+  margin-left: 5px;
+  font-size: 18px;
+}

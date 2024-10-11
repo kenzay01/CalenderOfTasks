@@ -1,0 +1,30 @@
+.home-page {
+  height: 80vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.home-container {
+  text-align: center;
+  padding: 40px 60px;
+  background-color: #242e36;
+  border-radius: 200px 100px;
+  box-shadow: 5px 10px 0px rgba(0, 0, 0, 0.5);
+  border: 5px solid #1a2026;
+}
+.home-page h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  filter: drop-shadow(2px 6px 10px rgba(0, 0, 0, 0.5));
+}
+.description {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  filter: drop-shadow(2px 6px 10px rgba(0, 0, 0, 0.5));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

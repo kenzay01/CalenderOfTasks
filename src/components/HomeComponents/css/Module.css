@@ -1,0 +1,108 @@
+.blur-background-module {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(3px);
+  z-index: 4;
+}
+.time {
+  position: absolute;
+  bottom: 10px;
+  border-bottom: #1a2026 3px solid;
+}
+.time p {
+  opacity: 0.6;
+}
+
+.module {
+  position: fixed;
+  top: 18%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  margin-top: 200px;
+  height: 300px;
+  width: 500px;
+  padding: 15px 20px;
+  background-color: #242e36;
+  border-radius: 10px;
+  border: 5px solid #1a2026;
+  box-shadow: 5px 10px 0 rgba(0, 0, 0, 0.7);
+}
+.module-header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.module-close {
+  position: absolute;
+  right: 0;
+  padding: 4px 10px;
+  border-radius: 8px;
+  background-color: #1a2026;
+  cursor: pointer;
+}
+.close-sign {
+  color: white;
+}
+.module-title {
+  text-align: center;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
+}
+.module-title p {
+  font-size: 24px;
+  color: white;
+  border-bottom: 4px solid #1a2026;
+}
+.module-body {
+  margin-top: 20px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.module-text-inpt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.module-text {
+  font-size: 24px;
+  text-align: center;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
+}
+.module-text-inpt input {
+  width: 350px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  background-color: #1a2026;
+  color: white;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.btn-module button {
+  width: 100px;
+  padding: 5px 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  filter: drop-shadow(0px 5px 0px rgba(185, 185, 185, 0.5));
+  transition: all 0.3s ease;
+}
+.btn-module button:hover {
+  background-color: #e0e0e0;
+}
+.btn-module button:active {
+  background-color: #c5c5c5;
+  filter: none;
+  transform: translateY(4px);
+}

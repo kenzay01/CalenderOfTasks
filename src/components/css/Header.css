@@ -1,0 +1,89 @@
+.header-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 10px 0px rgba(0, 0, 0, 0.5);
+  padding: 20px 0;
+  position: relative;
+  background-color: #242e36;
+  border-bottom: 5px solid #181e24;
+  z-index: 3;
+}
+
+.header-list li,
+.menu li {
+  list-style: none;
+  font-size: 40px;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.6));
+  cursor: pointer;
+}
+.header-list a,
+.menu li a {
+  text-decoration: none;
+  user-select: none;
+}
+.header-list li,
+.header-list a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: white;
+  transition: all 0.2s;
+}
+.header-list li:hover,
+.header-list a:hover,
+.menu li a:hover {
+  color: #8bcdff;
+}
+.header-list li h1 {
+  font-size: 32px;
+}
+.header-list li:first-child {
+  position: absolute;
+  left: 20px;
+}
+
+.header-list li:last-child {
+  position: absolute;
+  right: 20px;
+}
+.no-scroll {
+  overflow: hidden;
+}
+.menu {
+  position: absolute;
+  width: 15%;
+  height: 100vh;
+  background-color: #242e36;
+  z-index: 2;
+  border-right: 5px solid #181e24;
+}
+.blur-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(0.5px);
+  z-index: 1;
+}
+.menu ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  gap: 20px;
+}
+.menu li {
+  font-size: 24px;
+}
+.menu li a {
+  color: white;
+  transition: all 0.2s;
+}
+.header-list.menu-open {
+  box-shadow: none;
+}
