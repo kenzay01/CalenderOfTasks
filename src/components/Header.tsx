@@ -4,8 +4,14 @@ import { IoMenu } from "react-icons/io5";
 import { useState, useEffect } from "react";
 import Menu from "./Menu";
 import "./css/Header.css";
-
-export default function Header() {
+import type { User } from "../types/User";
+export default function Header({
+  userKey,
+  userData,
+}: {
+  userKey: boolean;
+  userData: User | null;
+}) {
   const [menu, setMenu] = useState(false);
 
   const handleMenu = () => {
@@ -41,8 +47,13 @@ export default function Header() {
             </Link>
           </h1>
         </li>
-        <li>
-          <Link to="/login" onClick={handleCloseMenu}>
+        <li className="username-icon">
+          <Link
+            to={userKey ? `/personal/${userData?.username}` : "/login"}
+            onClick={handleCloseMenu}
+          >
+            {" "}
+            <div className="full-username">{userData?.fullname}</div>
             <MdAccountCircle />
           </Link>
         </li>

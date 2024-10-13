@@ -87,3 +87,10 @@
 .header-list.menu-open {
   box-shadow: none;
 }
+.username-icon .full-username {
+  border-bottom: 3px solid #181e24;
+}
+.full-username {
+  font-size: 16px;
+  margin: 15px 5px 0 0;
+}

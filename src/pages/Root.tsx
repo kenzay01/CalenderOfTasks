@@ -1,11 +1,17 @@
 import { Outlet } from "react-router-dom";
 import Header from "../components/Header";
 import "./css/Root.css";
-
-export default function Root() {
+import type { User } from "../types/User";
+export default function Root({
+  userKey,
+  userData,
+}: {
+  userKey: boolean;
+  userData: null | User;
+}) {
   return (
     <div className="main-page">
-      <Header />
+      <Header userKey={userKey} userData={userData} />
       <div className="outlet">
         <Outlet />
       </div>
