@@ -1,4 +1,6 @@
 import TimeOfDay from "./TimeOfDay";
+import { useState } from "react";
+import { AiFillCaretDown, AiFillCaretUp } from "react-icons/ai";
 import "./css/ColumnOfDays.css";
 export default function ColumnOfDays({
   color,
@@ -9,6 +11,10 @@ export default function ColumnOfDays({
   day: string;
   id: number;
 }) {
+  const [closeColumn, setCloseColumn] = useState(true);
+  const handleCloseColumn = () => {
+    setCloseColumn(!closeColumn);
+  };
   const hours = [
     "9:00",
     "10:00",
@@ -28,8 +34,13 @@ export default function ColumnOfDays({
   });
   return (
     <div className="column-container">
-      <div className="day">{day}</div>
-      <div className="column-of-days">{renderTimeOfDay}</div>
+      <div className="column-header" onClick={handleCloseColumn}>
+        <div className="day">{day}</div>
+        <div className="btn-closer" onClick={handleCloseColumn}>
+          {closeColumn ? <AiFillCaretDown /> : <AiFillCaretUp />}
+        </div>
+      </div>
+      {closeColumn && <div className="column-of-days">{renderTimeOfDay}</div>}
     </div>
   );
 }

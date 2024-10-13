@@ -4,8 +4,8 @@ import Module from "./Module";
 export default function TimeOfDay({
   hour,
   color,
-  id,
-}: {
+}: // id,
+{
   hour: string;
   color: string;
   id: string;
@@ -15,7 +15,9 @@ export default function TimeOfDay({
   const handleTask = (e: React.ChangeEvent<HTMLInputElement>) => {
     setTask(e.target.value);
   };
-
+  const clearText = () => {
+    setTask("");
+  };
   const handleClick = () => {
     setModule(!module);
   };
@@ -59,6 +61,7 @@ export default function TimeOfDay({
           time={hour}
           onChange={handleTask}
           value={task}
+          onClearClick={clearText}
         />
       )}
     </>
