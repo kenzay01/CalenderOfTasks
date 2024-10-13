@@ -1,5 +1,6 @@
 .login-page,
 .reg-page {
+  position: relative;
   height: 80vh;
   display: flex;
   align-items: center;
@@ -93,4 +94,29 @@
 }
 .to-somewhere a:hover {
   color: #8bcdff;
+}
+.error-message {
+  position: absolute;
+  top: 10%;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #1a2026;
+  color: white;
+  font-weight: 400;
+  text-align: center;
+  animation: disapear-error-message 3s forwards;
+}
+.error-message.notneed {
+  display: none;
+}
+@keyframes disapear-error-message {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }

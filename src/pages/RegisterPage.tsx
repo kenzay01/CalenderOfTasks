@@ -1,12 +1,11 @@
 import "./css/LoginRegPage.css";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Input from "../components/Input";
 import SeePswd from "../components/Login&Registr/SeePswd";
-import { useNavigate } from "react-router-dom";
 
 export default function RegisterPage() {
-  const navigation = useNavigate();
+  const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -34,7 +33,7 @@ export default function RegisterPage() {
     console.log(username, password);
 
     //TODO: Add reg logic
-    navigation(`/personal/${username}`);
+    navigate("/");
   };
   return (
     <div className="reg-page">

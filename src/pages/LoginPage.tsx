@@ -1,14 +1,17 @@
 import "./css/LoginRegPage.css";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import Input from "../components/Input";
 import SeePswd from "../components/Login&Registr/SeePswd";
-import { useNavigate } from "react-router-dom";
+
 export default function LoginPage() {
-  const navigation = useNavigate();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const message = location.state ? location.state.message : "";
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [seePassword, setSeePassword] = useState(false);
+  const [showMessage, setShowMessage] = useState(!!message);
   const handleUsernameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setUsername(e.target.value);
   };
@@ -23,10 +26,23 @@ export default function LoginPage() {
     console.log(username, password);
 
     //TODO: Add login logic
-    navigation(`/personal/${username}`);
+    navigate("/");
   };
+  useEffect(() => {
+    if (message) {
+      const timer = setTimeout(() => {
+        setShowMessage(false);
+      }, 2000);
+      return () => clearTimeout(timer);
+    }
+  }, [message]);
   return (
     <div className="login-page">
+      {showMessage && (
+        <div className={`error-message ${message ? "" : "notneed"}`}>
+          {message}
+        </div>
+      )}
       <form className="login-form" onSubmit={handleSubmit}>
         <h1>Login</h1>
         <div className="input username">
